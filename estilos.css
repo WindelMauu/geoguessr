@@ -331,12 +331,19 @@ tbody tr:hover {
     border-radius: 15px;
     background-color: #F8F9F9;
 }
+.image-gallery a {
+    /* El enlace ahora actúa como contenedor de la imagen */
+    display: block;
+    line-height: 0; /* Elimina espacio debajo de la imagen */
+}
+
 .image-gallery img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: zoom-in; /* Cursor de zoom */
 }
 .image-gallery img:hover {
     transform: scale(1.05);
@@ -352,11 +359,19 @@ tbody tr:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
+    cursor: zoom-in; /* Cursor de zoom */
 }
 .image-in-table img:hover {
     transform: scale(1.08);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
+
+/* Ajuste para que las imágenes zoomables dentro de las tablas se vean centradas */
+.image-in-table a {
+    display: inline-block; /* Permite centrar el enlace */
+    line-height: 0;
+}
+
 
 /* --- Estilos del Formulario de Contacto --- */
 
@@ -682,6 +697,72 @@ tbody tr:hover {
 
 #central-status-message.error-central {
     background-color: #E74C3C;
+}
+
+
+/* --- Estilos para el Lightbox / Zoom de Imágenes --- */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Alto z-index para estar sobre todo */
+    cursor: pointer;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#lightbox:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 3px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transform: scale(0.9); 
+    transition: transform 0.3s ease-in-out;
+}
+
+#lightbox:not(.hidden) #lightbox-img {
+    transform: scale(1);
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10001; 
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    transition: color 0.2s ease-in-out, transform 0.2s;
+}
+
+#lightbox-close:hover {
+    color: #f00;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Estilo para las imágenes zoomables para indicar que son interactivas */
+.zoomable-image {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.zoomable-image:hover {
+    transform: scale(1.02);
 }
 
 
