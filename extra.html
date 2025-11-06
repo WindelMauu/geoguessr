@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuessr PRO | Información Extra</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Logo GeoGuessr PRO" class="site-logo">
+                <h1>GeoGuessr PRO</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Inicio Guía</a> <a href="#introduccion-extra">Info Extra</a> 
+                <a href="index.html#recursos">Recursos</a>
+                <a href="index.html#contacto">Contacto</a> 
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        
+        <aside id="sidebar">
+            <nav>
+                <h3>Índice de Extras</h3>
+                <ul>
+                    <li><a href="index.html">⬅️ Volver a la Guía Principal</a></li>
+                    <hr style="margin: 10px 0; border-top: 1px solid #D7DBDD;">
+                    <li><a href="#lineas-viales" onclick="scrollToElement('lineas-viales'); return false;">🛣️ Líneas y Material Vial</a></li>
+                    <li><a href="#matrículas" onclick="scrollToElement('matrículas'); return false;">🔢 Matrículas (Placas)</a></li>
+                    <li><a href="#postes-luz" onclick="scrollToElement('postes-luz'); return false;">⚡ Postes de Luz</a></li>
+                    <li><a href="#arquitectura" onclick="scrollToElement('arquitectura'); return false;">🏛️ Arquitectura y Tejados</a></li>
+                    <li><a href="#paisaje" onclick="scrollToElement('paisaje'); return false;">🌲 Paisaje y Vegetación</a></li>
+                    <li><a href="#detalles" onclick="scrollToElement('detalles'); return false;">🌍 Cobertura y Vehículos</a></li>
+                    <li><a href="#clima" onclick="scrollToElement('clima'); return false;">❄️ Pistas Climáticas</a></li>
+                    <li><a href="#tecnologia" onclick="scrollToElement('tecnologia'); return false;">📡 Tecnología GPS</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="content">
+
+            <section id="introduccion-extra">
+                <h2 style="margin-top: 0;">📚 Información Adicional y Profundización</h2>
+                <p class="intro-text">
+                    Esta sección contiene metadatos avanzados que te ayudarán a diferenciar países con arquitecturas o lenguajes similares. ¡El conocimiento profundo te llevará al Plonk!
+                </p>
+            </section>
+            
+            <hr>
+            
+            <section id="lineas-viales">
+                <h2>🛣️ Líneas Viales y Material de la Carretera</h2>
+                <p>El color de la línea central (amarilla o blanca), el grosor de las líneas discontinuas, y el color del arcén son vitales para distinguir países con paisajes similares (ej. países nórdicos vs. Europa del Este).</p>
+                
+                <div class="image-gallery full-width">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_roadlines.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_roadlines.png" alt="Patrones de Líneas Viales" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_roadtype.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_roadtype.png" alt="Tipos de Material de Carretera (Asfalto, Tierra)" class="zoomable-image">
+                    </a>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="matrículas">
+                <h2>🔢 Matrículas y Placas (Bordes, Colores, Fuentes)</h2>
+                <p>Las matrículas de los vehículos suelen estar difuminadas, pero el color del borde, el color del fondo y la fuente del texto a menudo revelan el país de origen.</p>
+                
+                <div class="image-gallery full-width">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_licenceplates.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_licenceplates.png" alt="Ejemplos de Matrículas por País" class="zoomable-image">
+                    </a>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="postes-luz">
+                <h2>⚡ Postes de Luz y Teléfono</h2>
+                <p>La forma y material de los postes (madera redonda, hormigón, metal reticulado) son únicos por región. Observa también los transformadores y los cables de sujeción.</p>
+                
+                <div class="image-gallery full-width">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_poles.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_poles.png" alt="Tipos de Postes de Luz por País" class="zoomable-image">
+                    </a>
+                </div>
+            </section>
+
+            <hr>
+            
+            <section id="arquitectura">
+                <h2>🏛️ Arquitectura y Tejados</h2>
+                <p>La forma, el color y los materiales de las casas y tejados son marcadores geográficos muy fuertes que rara vez fallan. Observa la pendiente, el material (tejas, metal, paja) y el color general.</p>
+                
+                <div class="image-gallery full-width">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_architecture2.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_architecture2.png" alt="Arquitectura y Estilos de Construcción" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_roofs.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_roofs.png" alt="Tipos de Tejados" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_quirkyarchitecture.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_quirkyarchitecture.png" alt="Arquitectura Peculiar y Única" class="zoomable-image">
+                    </a>
+                </div>
+            </section>
+            
+            <hr>
+            
+            <section id="paisaje">
+                <h2>🌲 Paisaje, Campos y Carreteras Secundarias</h2>
+                <p>Las características de la carretera, el tipo de tierra, la vegetación dominante y la elevación te ayudan a diferenciar continentes e incluso regiones dentro de un país.</p>
+                
+                <div class="image-gallery full-width">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_landscape.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_landscape.png" alt="Vistas Panorámicas y Paisajes" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_vegetation.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_vegetation.png" alt="Tipos de Vegetación y Árboles" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_crops.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_crops.png" alt="Tipos de Cultivos y Cosechas" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_dirt.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_dirt.png" alt="Color y Tipo de Tierra" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_elevation.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_elevation.png" alt="Elevación y Montañas" class="zoomable-image">
+                    </a>
+                </div>
+
+                <p class="road-meta-detail" style="margin-top: 15px; padding: 15px; border-left: 4px solid #3498DB; background-color: #F8F9F9; border-radius: 8px;">
+                    **Cultivos Clave:** El maíz y los cereales como el trigo son los cultivos más comunes en Norteamérica y Europa. El arroz es extremadamente común en las zonas agrícolas de Asia. El vino suele producirse en regiones específicas, como la región del Véneto en Italia.
+                </p>
+            </section>
+            
+            <hr>
+            
+            <section id="señales-dirección">
+                <h2>🗺️ Señales de Dirección y Rótulos Viales</h2>
+                <p>El color (azul, verde, blanco, amarillo) y la fuente de las señales de dirección y nombre de calles son una pista inmediata del país o región.</p>
+                
+                <div class="image-gallery full-width">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_directionalsigns1.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_directionalsigns1.png" alt="Señales de Dirección Viales" class="zoomable-image">
+                    </a>
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_streetsigns.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/beginners_streetsigns.png" alt="Rótulos de Calles y Nombres de Ciudades" class="zoomable-image">
+                    </a>
+                </div>
+            </section>
+
+            <hr>
+            
+            <section id="detalles">
+                <h2>🌍 Meta de Cobertura y Generaciones de Cámara</h2>
+                <p>Identificar la generación de cámara (Gen 1, 2, 3, 4) es esencial, ya que Google implementa nuevas tecnologías por país. ¡Observa la nitidez, la barra de techo y las costuras de la imagen!</p>
+                
+                <div class="image-gallery full-width">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_cameragens.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_cameragens.png" alt="Generaciones de Cámara Google Street View" class="zoomable-image">
+                    </a>
+                </div>
+                
+                <h3>Vehículos Únicos y Barras de Techo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vehículo / Cámara</th>
+                            <th>País / Región</th>
+                            <th>Detalle Clave</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="road-meta">Barra de Techo Larga</td>
+                            <td>**Ghana / Senegal**</td>
+                            <td>Vehículo blanco con una barra de techo larga (Gen 2/3), a menudo con una franja negra visible.</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Coche de Colores Únicos</td>
+                            <td>**Perú / Ecuador (Rural)**</td>
+                            <td>En algunas zonas andinas, se usaron coches o mochilas con barras de techo muy rústicas o cámaras de baja calidad.</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Manchas de Cámara (Blur)</td>
+                            <td>**Brasil**</td>
+                            <td>A menudo se ven grandes manchas de desenfoque en el parabrisas delantero, o antenas delgadas y muy altas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <hr>
+
+            <section id="clima">
+                <h2>❄️ Pistas Climáticas y Geográficas</h2>
+                <p>La vegetación y el clima son esenciales para diferenciar latitudes, pero también para identificar países específicos que tienen cobertura de invierno.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pista Geográfica</th>
+                            <th>País / Región</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="road-meta">Nieve Abundante (Invierno)</td>
+                            <td>**Rusia (Siberia), Canadá, Noruega, Finlandia**</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Palmeras y Desierto</td>
+                            <td>**EAU (Dubai), Chile (Norte), Sudáfrica**</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Bosques de Eucalipto</td>
+                            <td>**Australia, Chile, Portugal**</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <hr>
+            
+            <section id="tecnologia">
+                <h2>📡 Tecnología y Errores de Google</h2>
+                <p>Los fallos de la cámara o las versiones del mapa pueden ser metadatos únicos.</p>
+                
+                <ul class="resource-list">
+                    <li>**GeoGuessr Blur:** El difuminado de rostros y matrículas varía. En **Alemania**, suele ser extremo.</li>
+                    <li>**Gen 1 (Puntos):** Cobertura muy antigua, identificable por la baja resolución y puntos negros. Común en **Irlanda** o **Argentina** de 2009.</li>
+                    <li>**Fish-eye:** Cobertura con efecto "ojo de pez" muy marcado. A veces se ve en áreas rurales de **Ghana**.</li>
+                </ul>
+            </section>
+            
+        </main>
+    </div>
+    
+    <div id="lightbox" class="hidden">
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+        <span id="lightbox-close">✖</span>
+    </div>
+    
+    <script>
+        // Función de desplazamiento suave (replicada para extra.html)
+        function scrollToElement(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' 
+                });
+            }
+        }
+        
+        // --- Funcionalidad de LIGHTBOX / ZOOM ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        // Selecciona todas las imágenes con la clase 'zoomable-image'
+        document.querySelectorAll('.zoomable-image').forEach(image => {
+            image.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                const imageUrl = image.parentElement.href;
+                
+                lightboxImg.src = imageUrl;
+                lightbox.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Cierra el lightbox al hacer clic en el botón de cierre
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Cierra el lightbox al hacer clic fuera de la imagen (en el fondo oscuro)
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+
+</body>
+</html>
