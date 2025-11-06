@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuessr PRO | Guía Definitiva de Metadatos</title>
+    <meta data="Joel El Younoussi Layel">
+    <meta data="2SMR">
+    <link rel="stylesheet" href="estilos.css">
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="central-status-message" class="hidden-status">
+    <span id="central-status-text"></span>
+</div>
+
+    <header>
+        <div class="header-content">
+            <h1>🌍 GeoGuessr PRO</h1>
+            <nav class="header-nav">
+                <a href="#introduccion">Inicio</a>
+                <a href="#sol-hemisferio">Guía</a>
+                <a href="#contacto">Contacto</a> 
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        
+        <aside id="sidebar">
+            <nav>
+                <h3>Búsqueda Rápida</h3>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Buscar en la guía...">
+                    <button id="search-button">🔍 Buscar</button>
+                </div>
+                
+                <h3>Índice Rápido</h3>
+                <ul>
+                    <li><a href="#sol-hemisferio" onclick="scrollToElement('sol-hemisferio'); return false;">☀️ Sol y Hemisferios</a></li>
+                    <li><a href="#conduccion" onclick="scrollToElement('conduccion'); return false;">🚗 Lado de Conducción</a></li>
+                    <li><a href="#coches-camaras" onclick="scrollToElement('coches-camaras'); return false;">📷 Coches y Cámaras</a></li>
+                    <li><a href="#senales" onclick="scrollToElement('senales'); return false;">🛑 Señales Clave</a></li>
+                    <li><a href="#idiomas" onclick="scrollToElement('idiomas'); return false;">💬 Idiomas Clave</a></li>
+                    <li><a href="#estructural" onclick="scrollToElement('estructural'); return false;">🚧 Estructurales (Meta Vial)</a></li>
+                    <li><a href="#pistas-claves" onclick="scrollToElement('pistas-claves'); return false;">💡 Pistas Clave</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="content">
+
+            <section id="introduccion">
+                <p class="intro-text">
+                    Bienvenido a la **Guía Definitiva de Metadatos de GeoGuessr PRO**. Prepárate para dominar cada pista, desde las sombras del sol hasta la más sutil señal vial. ¡Con esta información, te convertirás en un auténtico Plonker y conquistarás cualquier mapa!
+                </p>
+            </section>
+
+            <section id="sol-hemisferio">
+                <h2>☀️ Sol y Hemisferios</h2>
+                <p>El sol es el indicador geográfico más fiable. Observa la dirección de las sombras al mediodía para determinar si estás en el Norte o en el Sur.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Posición Clave</th>
+                            <th>Diferencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="road-meta">Hemisferio Norte</td>
+                            <td>Sol al Sur (Mediodía)</td>
+                            <td>Las sombras apuntan principalmente hacia el **Norte**.</td>
+                        </tr>
+                        <tr>
+                        
+                            <td class="road-meta">Hemisferio Sur</td>
+                            <td>Sol al Norte (Mediodía)</td>
+                            <td>Las sombras apuntan principalmente hacia el **Sur**.</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Zona Ecuatorial</td>
+                            <td>Sol casi vertical</td>
+                            <td>Sombras muy **cortas** al mediodía.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="image-gallery">
+                    <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_sundirection.png" alt="Dirección del Sol por Hemisferio">
+                    <img src="https://storage.googleapis.com/portaleducativo-net-publica-g3p6/biblioteca/Planeta_geograficos.jpg" alt="Planeta con Líneas Geográficas">
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="conduccion">
+                <h2>🚗 Lado de Conducción</h2>
+                <p>El volante y el lado de la carretera reducen el mundo a la mitad instantáneamente. Busca el vehículo de Google Street View (si es visible).</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>País/Región (Común)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**Derecha (LHD)**</td>
+                            <td>América (casi toda), Europa (casi toda).</td>
+                        </tr>
+                        <tr>
+                            <td>**Izquierda (RHD)**</td>
+                            <td>Reino Unido, Australia, Japón, India, Sudáfrica, Nueva Zelanda.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="image-gallery full-width">
+                    <img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/Driving_direction_v7.png" alt="Mapa de direcciones de conducción">
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="coches-camaras">
+                <h2>📷 Coches y Cámaras (Geometría y Color)</h2>
+                <p>El color y la forma del vehículo (si es visible) y la geometría de la cámara/antena pueden ser el mejor indicador de país, especialmente en regiones con poca cobertura.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de Coche/Cámara</th>
+                            <th>País/Región (Común)</th>
+                            <th>Indicio Visual Clave</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="road-meta">Coche Negro</td>
+                            <td>**Japón**</td>
+                            <td>Vehículo de cámara de Google negro. Muy distintivo de áreas japonesas.</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">"Gen 4" / Antena Larga</td>
+                            <td>**Europa del Este, Brasil, India, Tailandia**</td>
+                            <td>Antena de cámara notablemente alta o un mástil delgado y largo.</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Coche de Colores Vivos</td>
+                            <td>**Colombia, Brasil, Nigeria**</td>
+                            <td>A veces se ven coches de colores brillantes o patrones únicos (ej. amarillo en Colombia).</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Antena Corta y Gruesa</td>
+                            <td>**Estados Unidos, Europa Occidental (Gen 3)**</td>
+                            <td>Un vehículo más antiguo con una antena baja y gruesa (menos común en cobertura moderna).</td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Barra de Techo Negra (No Google)</td>
+                            <td>**Australia**</td>
+                            <td>En áreas remotas, puede verse un coche con una barra de techo negra y distintiva (proveedor de terceros).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="image-gallery full-width">
+                    <img src="Imgg2.jpg" alt="Ejemplos de coches y cámaras de Google Street View">
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="senales">
+                <h2>🛑 Señales de Tráfico Clave</h2>
+                <p>Las señales varían en idioma, forma y color según la convención regional (Vienna Convention). ¡Son indicadores muy precisos!</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Señal</th>
+                            <th>Ubicación Clave</th>
+                            <th>Descripción / Indicio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="signal-key">"STOP"</td>
+                            <td>Europa, EE. UU., Canadá (mayoría)</td>
+                            <td>Normativa internacional.</td>
+                        </tr>
+                        <tr>
+                            <td class="signal-key">"PARE"</td>
+                            <td>Mayoría de Latinoamérica</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="signal-key">"ALTO"</td>
+                            <td>México, Guatemala</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="signal-key">Sin Borde Exterior</td>
+                            <td>Grecia</td>
+                            <td>Señal de fin de prioridad (circular blanca con franja negra).</td>
+                        </tr>
+                        <tr>
+                            <td class="signal-key">Guion Grande</td>
+                            <td>Países Bajos</td>
+                            <td>Señal de fin de prioridad con guion notablemente grande.</td>
+                        </tr>
+                        <tr>
+                            <td class="signal-key">Texto Rojo</td>
+                            <td>Dinamarca</td>
+                            <td>Señales de aviso específicas: texto rojo/fondo blanco/borde rojo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="image-gallery full-width">
+                    <img src="https://preview.redd.it/2tx42cty3xs61.png?width=1080&crop=smart&auto=webp&s=2a883c3469c300333f942c84887ac9a447e99d60" alt="Señales de Tráfico Clave GeoGuessr: Stop, Pare, Alto, Prioridad">
+                </div>
+            </section>
+
+            <hr>
+            
+            <section id="idiomas">
+                <h2>💬 Identificación Rápida de Idiomas</h2>
+                <p>Reconocer los caracteres especiales, acentos, o la estructura básica de las letras te permite reducir el número de países de inmediato.</p>
+                
+                <div class="image-gallery full-width">
+                    <img src="https://i.redd.it/z9wtqs747ws61.png" alt="Guía de Identificación Rápida de Idiomas por caracteres">
+                    <img src="https://preview.redd.it/diacritics-and-unique-letters-in-eastern-europe-and-baltics-v0-edxsc2om4ngc1.png?width=1080&crop=smart&auto=webp&s=2f917e8128c5c0d9b47777fb3f01626d9f37077d" alt="Diacríticos y Letras Únicas en Europa del Este">
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="estructural">
+                <h2>🚧 Carreteras, Bolardos y Postes (Meta Estructural)</h2>
+                <p>Busca metadatos en los márgenes de la carretera, son a menudo únicos por país o región.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Ubicación Clave</th>
+                            <th>Detalle Clave</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="road-meta">Postes Kilométricos</td>
+                            <td>Eslovenia</td>
+                            <td class="road-meta-detail">Incluyen el número de carretera en un recuadro amarillo. 
+                            <div class="image-in-table"><img src="https://us.123rf.com/450wm/jojoo64/jojoo641512/jojoo64151200321/49239106-esloveno-se%C3%B1al-de-tr%C3%A1fico-carretera-marcador-de-distancia.jpg?ver=6" alt="Poste kilométrico Eslovenia"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Soporte de Señal</td>
+                            <td>Colombia</td>
+                            <td class="road-meta-detail">Soporte trasero vertical adicional formando una CRUZ (†). 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Soporte de Señal</td>
+                            <td>Uruguay</td>
+                            <td class="road-meta-detail">Dos soportes pequeños (uno arriba, uno abajo) en la parte trasera. 
+                            <div class="image-in-table"><img src="https://practicatest.uy/static/img/uy/senales/senales_peligro.png" alt="Señales de Peligro Uruguay"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Bolardos</td>
+                            <td>Francia, Mexico, Islandia, Italia.</td>
+                            <td class="road-meta-detail">A menudo blancos y rojos (general).
+                            <div class="image-in-table"><img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/whattolook_bollard.png" alt="Ejemplos de Bolardos"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Numeración Azul</td>
+                            <td>Alemania, Francia, Italia, etc.</td>
+                            <td class="road-meta-detail">Carreteras de alta velocidad (Autopistas / Autovías).
+                            <div class="image-in-table"><img src="Imgg.jpg" alt="Numeración Azul de Carreteras"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="road-meta">Numeración Amarillo/Negro</td>
+                            <td>Alemania, Austria, etc.</td>
+                            <td class="road-meta-detail">Carreteras principales (Federales / Nacionales).
+                            <div class="image-in-table"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bundesstra%C3%9Fe_299_number.svg/640px-Bundesstra%C3%9Fe_299_number.svg.png" alt="Numeración Amarillo/Negro"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <hr>
+
+            <section id="pistas-claves">
+                <h2>💡 Pistas Clave Misceláneas</h2>
+                <p>Algunos metadatos son más sutiles y pueden ayudarte a acotar el país cuando fallan los indicadores principales. Estos incluyen detalles de la matrícula, postes y elementos de mobiliario urbano. Observa esta imagen para identificar los elementos más comunes:</p>
+                <div class="image-gallery full-width">
+                    <img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/beginners_randommetas1.png" alt="Pistas Clave de GeoGuessr (Miscélanea)">
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="contacto">
+                <h2>✉️ Contacto y Sugerencias</h2>
+                <p>¿Tienes sugerencias para mejorar la guía o quieres compartir un truco de GeoGuessr? ¡Envíanos tu mensaje, puedes adjuntar imágenes o archivos de hasta 8MB!</p>
+                
+                <form id="contact-form" class="contact-form" onsubmit="sendDiscordWebhook(event);">
+                    <div class="form-group">
+                        <label for="nombre">Tu Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Joel Layel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Tu Email:</label>
+                        <input type="text" id="email" name="email" placeholder="ejemplo@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Tu Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Me encantaría ver más detalles sobre..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group file-upload-container">
+                        <label for="archivo" class="file-label">Adjuntar Archivos (Máx. 8MB en total)</label>
+                        <input type="file" id="archivo" name="archivo" accept="image/*, .zip, .pdf, .txt" multiple>
+                        <span id="file-name-display">Ningún archivo seleccionado.</span>
+                    </div>
+
+                    <button type="submit" id="submit-button">Enviar Mensaje 🚀</button>
+                    <div id="form-status" class="status-message"></div>
+                </form>
+            </section>
+        
+        </main>
+    </div>
+
+    <div id="ai-chat-container">
+        <button id="chat-toggle-button">
+            🤖 GeoGuru
+        </button>
+
+        <div id="ai-chat-window" class="hidden">
+            <div id="chat-header">
+                GeoGuru 🤖
+                <span id="chat-close-button">&times;</span>
+            </div>
+            <div id="chat-messages">
+                <div class="message bot-message">¡Hola! Soy GeoGuru, tu asistente de GeoGuessr. Pregúntame sobre cualquier concepto de la guía (e.g., "Postes Eslovenia").</div>
+            </div>
+            <div id="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Escribe tu duda aquí...">
+                <button id="chat-send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // --- 1. Funcionalidad de Desplazamiento Suave (Smooth Scrolling) ---
+        function scrollToElement(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' 
+                });
+            }
+        }
+
+        // --- 2. Funcionalidad de Búsqueda ---
+        document.getElementById('search-button').addEventListener('click', function() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+            let found = false;
+
+            for (const section of sections) {
+                const sectionText = section.textContent.toLowerCase();
+                if (sectionText.includes(query)) {
+                    scrollToElement(section.id);
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found && query.length > 0) {
+                alert('No se encontraron resultados para: "' + document.getElementById('search-input').value + '"');
+            }
+        });
+
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('search-button').click();
+            }
+        });
+
+        // --- 3. Funcionalidad del Asistente IA (GeoGuru) y Webhook de Discord ---
+        
+        // --- CHAT IA (Simulación) ---
+        const chatWindow = document.getElementById('ai-chat-window');
+        const chatToggle = document.getElementById('chat-toggle-button');
+        const chatClose = document.getElementById('chat-close-button');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send-button');
+        const chatMessages = document.getElementById('chat-messages');
+
+        // Alternar visibilidad de la ventana de chat
+        chatToggle.addEventListener('click', () => {
+            chatWindow.classList.toggle('hidden');
+        });
+
+        // Cerrar la ventana de chat
+        chatClose.addEventListener('click', () => {
+            chatWindow.classList.add('hidden');
+        });
+
+        // Función simulada para generar respuesta de la IA
+        function generateAIResponse(query) {
+            query = query.toLowerCase().trim();
+            let response = '';
+
+            // Lógica simple de respuesta basada en palabras clave
+            if (query.includes('sol') || query.includes('hemisferio')) {
+                response = 'La dirección del Sol es clave: en el <b>Hemisferio Norte</b>, el sol está al sur y las sombras apuntan al norte. En el <b>Hemisferio Sur</b>, el sol está al norte y las sombras apuntan al sur.';
+            } else if (query.includes('conduccion') || query.includes('volante')) {
+                response = 'Si ves el volante a la <b>derecha (RHD)</b>, conduces por la izquierda (Reino Unido, Japón, Australia). Si lo ves a la <b>izquierda (LHD)</b>, conduces por la derecha (Américas, Europa Continental).';
+            } else if (query.includes('coche') || query.includes('camara') || query.includes('japon') || query.includes('vehiculo')) {
+                response = 'La geometría del coche y la cámara son pistas importantes. Por ejemplo, los coches de Google negros son típicos de <b>Japón</b> y algunas cámaras en Brasil tienen antenas largas. La imagen "Imgg2.jpg" te muestra ejemplos visuales de distintos coches de Street View.';
+            } else if (query.includes('stop') || query.includes('señales')) {
+                response = 'Las señales de STOP cambian: <b>STOP</b> (Europa/EE.UU.), <b>PARE</b> (Latinoamérica), y <b>ALTO</b> (México/Guatemala). Otras señales distintivas son las de Grecia y Países Bajos.';
+            } else if (query.includes('eslovenia') || query.includes('postes')) {
+                response = 'Los postes kilométricos de Eslovenia son muy distintivos: son blancos y tienen el <b>número de la carretera dentro de un recuadro amarillo</b>.';
+            } else if (query.includes('colombia')) {
+                response = 'Colombia es conocida por el soporte trasero de sus señales de tráfico, que a menudo forma una <b>pequeña cruz metálica</b> (†).';
+            } else if (query.includes('azul') || query.includes('amarillo') || query.includes('numeracion')) {
+                response = 'La numeración azul es para autopistas o autovías. La numeración amarilla/negra es para carreteras federales o principales (común en Alemania/Austria).';
+            } else if (query.includes('pistas') || query.includes('miscelaneas') || query.includes('placa')) {
+                response = 'Las pistas misceláneas incluyen detalles de <b>placas de matrícula</b>, el diseño de <b>vallas</b> y las <b>etiquetas</b> en los postes de electricidad. La sección de "Pistas Clave Misceláneas" tiene una imagen con varios ejemplos.';
+            } else if (query.includes('idiomas') || query.includes('lenguas') || query.includes('caracteres')) {
+                response = 'La identificación de idiomas por caracteres especiales (cirílico, tailandés, etc.) es esencial. Por ejemplo, el <b>cirílico</b> te acota a Bulgaria/Rusia, y las diéresis con puntitos o anillos (`Ä, Ö, Å`) son comunes en el norte de Europa.';
+            } else {
+                response = 'Hmm... No estoy seguro de ese concepto. ¿Puedes intentar con palabras clave como "sol", "coche", "stop", "idiomas" o "numeración"?';
+            }
+            return response;
+        }
+
+        // Función para enviar mensaje del Chat IA
+        function sendMessage() {
+            const query = chatInput.value;
+            if (query.trim() === "") return;
+
+            // 1. Mostrar mensaje del usuario
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message user-message';
+            userMsg.textContent = query;
+            chatMessages.appendChild(userMsg);
+
+            // 2. Simular tiempo de espera y mostrar respuesta de la IA
+            chatInput.value = '';
+            chatInput.disabled = true;
+            chatSend.disabled = true;
+            
+            setTimeout(() => {
+                const aiResponseText = generateAIResponse(query);
+                const botMsg = document.createElement('div');
+                botMsg.className = 'message bot-message';
+                botMsg.innerHTML = aiResponseText; 
+
+                chatMessages.appendChild(botMsg);
+
+                // Desplazar hacia abajo
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                chatInput.disabled = false;
+                chatSend.disabled = false;
+                chatInput.focus();
+
+            }, 800); 
+
+            // Desplazar hacia abajo inmediatamente
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // --- WEBHOOK DE DISCORD ---
+        const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1435603401638674754/phcKyil1RruyZmnoicXTMuQZz9MV5mzdu8r9YXMlr7dt3qUoUk4OsEN9-CwHZUXCnZtO';
+        const MAX_FILE_SIZE_MB = 8;
+        const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
+        const formStatus = document.getElementById('form-status');
+        const fileInput = document.getElementById('archivo');
+        const fileNameDisplay = document.getElementById('file-name-display');
+        const emailInput = document.getElementById('email');
+
+        const centralStatus = document.getElementById('central-status-message');
+        const centralStatusText = document.getElementById('central-status-text');
+
+
+        // Actualiza el nombre(s) de los archivos seleccionados
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                const names = Array.from(fileInput.files).map(file => file.name);
+                fileNameDisplay.textContent = names.join(', ');
+            } else {
+                fileNameDisplay.textContent = 'Ningún archivo seleccionado.';
+            }
+        });
+
+        // Muestra el estado del formulario (Versión antigua: dentro del formulario - usada para errores de validación)
+        function setFormStatus(message, isError) {
+            formStatus.classList.remove('success', 'error');
+            formStatus.textContent = message;
+            formStatus.classList.add(isError ? 'error' : 'success');
+            formStatus.style.opacity = 1;
+            setTimeout(() => { formStatus.style.opacity = 0; }, 5000); 
+        }
+
+        // Muestra el estado del formulario (NUEVA Versión: centrado y flotante - usada para éxito/error de envío)
+        function setStatus(message, isError) {
+            centralStatus.classList.remove('success-central', 'error-central', 'hidden-status');
+            centralStatusText.textContent = message;
+            centralStatus.classList.add(isError ? 'error-central' : 'success-central');
+            
+            // Hace visible el mensaje
+            centralStatus.style.opacity = 1;
+            centralStatus.style.visibility = 'visible';
+
+            // Lo oculta después de 3 segundos
+            setTimeout(() => { 
+                centralStatus.classList.add('hidden-status'); 
+            }, 3000); 
+        }
+        
+        // Función de validación de email (básica)
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            return emailRegex.test(email);
+        }
+
+
+        // Función principal para enviar el formulario a Discord
+        async function sendDiscordWebhook(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const submitButton = document.getElementById('submit-button');
+            const files = fileInput.files;
+
+            // --- 1. VALIDACIÓN DEL EMAIL ---
+            if (!isValidEmail(emailInput.value)) {
+                setFormStatus('❌ Error: Por favor, introduce un formato de correo electrónico válido (ej. nombre@dominio.com).', true);
+                return;
+            }
+
+            // Deshabilitar botón para evitar envíos dobles
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+            setFormStatus('', false); // Limpia el mensaje interno del formulario
+
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = emailInput.value;
+            const mensaje = document.getElementById('mensaje').value;
+
+
+            // --- 2. VALIDACIÓN DEL TAMAÑO TOTAL DE ARCHIVOS ---
+            let totalSize = 0;
+            if (files.length > 0) {
+                for (const file of files) {
+                    totalSize += file.size;
+                }
+            }
+            if (totalSize > MAX_FILE_SIZE_BYTES) {
+                setFormStatus(`Error: El tamaño total de los archivos excede el límite de ${MAX_FILE_SIZE_MB}MB.`, true);
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar Mensaje 🚀';
+                return;
+            }
+            
+
+            // --- 3. PREPARAR DATOS DEL WEBHOOK ---
+            const webhookData = new FormData();
+            
+            // Crear el objeto JSON de Discord Embed
+            const embed = {
+                title: "📧 Nuevo Mensaje de Guía GeoGuessr PRO",
+                description: mensaje,
+                color: 3498901, 
+                fields: [
+                    { name: "👤 Nombre", value: nombre, inline: true },
+                    { name: "📧 Email", value: email, inline: true },
+                    { name: "📦 Archivos Adjuntos", value: files.length > 0 ? `${files.length} archivo(s)` : "Ninguno", inline: false }
+                ],
+                timestamp: new Date().toISOString(),
+            };
+            
+            // Adjuntar el JSON del Embed
+            webhookData.append('payload_json', JSON.stringify({ embeds: [embed] }));
+
+
+            // --- 4. ADJUNTAR MÚLTIPLES ARCHIVOS (CORRECCIÓN CLAVE) ---
+            if (files.length > 0) {
+                for (let i = 0; i < files.length && i < 10; i++) { 
+                    // Adjuntar cada archivo con un nombre único: file0, file1, etc.
+                    webhookData.append(`file${i}`, files[i], files[i].name);
+                }
+                if (files.length > 10) {
+                     // Si hay más de 10, ajustamos el mensaje para Discord
+                     embed.description = `[AVISO: Solo se adjuntaron 10 archivos. Los archivos restantes fueron omitidos.]\n\n${mensaje}`;
+                     webhookData.set('payload_json', JSON.stringify({ embeds: [embed] }));
+                }
+            }
+
+
+            // --- 5. ENVIAR A DISCORD ---
+            try {
+                const response = await fetch(DISCORD_WEBHOOK_URL, {
+                    method: 'POST',
+                    body: webhookData,
+                });
+
+                if (response.ok) {
+                    // Muestra el mensaje centrado de éxito
+                    setStatus("✅ ¡Mensaje enviado con éxito!", false);
+                    form.reset(); // Limpiar el formulario
+                    fileNameDisplay.textContent = 'Ningún archivo seleccionado.';
+                } else {
+                    // Muestra el mensaje centrado de error
+                    setStatus(`❌ Error al enviar (Status: ${response.status}). Intenta de nuevo.`, true);
+                }
+
+            } catch (error) {
+                setStatus("❌ Error de conexión. Verifica la URL del Webhook o tu red.", true);
+            }
+
+            // Volver a habilitar el botón y restablecer el texto
+            submitButton.disabled = false;
+            submitButton.textContent = 'Enviar Mensaje 🚀';
+        }
+
+        document.getElementById('contact-form').onsubmit = sendDiscordWebhook;
+
+    </script>
+
+</body>
+</html>
