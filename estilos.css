@@ -10,576 +10,6 @@
 /* Fuentes adicionales */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap');
 
-html {
-    scroll-behavior: smooth; 
-}
-
-body {
-    font-family: 'Open Sans', sans-serif; /* Fuente principal más legible */
-    background-color: #ECF0F1;
-    color: #2C3E50;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* --- Header con Efecto de Mapamundi y Barra de Navegación --- */
-
-header {
-    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); /* Gradiente oscuro */
-    color: #ffffff;
-    padding: 20px 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada */
-    position: relative; /* Para el pseudo-elemento del mapa */
-    overflow: hidden; /* Oculta partes del mapa que se desbordan */
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200%;
-    height: 200%;
-    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Textura sutil */
-    opacity: 0.05;
-    z-index: 0;
-    pointer-events: none; /* No interfiere con clics */
-    animation: rotateMap 60s linear infinite; /* Animación de rotación */
-}
-
-@keyframes rotateMap {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-
-.header-content {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative; /* Para que esté sobre el pseudo-elemento */
-    z-index: 1;
-}
-
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.8em;
-    font-weight: 900;
-    margin: 0;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.header-nav {
-    display: flex;
-    gap: 25px;
-}
-
-.header-nav a {
-    color: #ECF0F1;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.1em;
-    padding: 8px 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-}
-
-.header-nav a:hover {
-    background-color: #3498DB; /* Azul de acento */
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Layout Principal --- */
-
-.main-layout {
-    display: flex;
-    max-width: 1350px; /* Más ancho aún */
-    margin: 40px auto;
-    padding: 0 30px;
-    gap: 30px; /* Espacio entre sidebar y contenido */
-}
-
-/* --- Menú Lateral (Sidebar) y Búsqueda --- */
-
-#sidebar {
-    flex-shrink: 0; /* No se encoge */
-    width: 300px; /* Ancho un poco mayor */
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    height: fit-content;
-    position: sticky;
-    top: 40px; /* Separación del top */
-    transition: all 0.3s ease-in-out;
-}
-
-/* Estilos de Búsqueda */
-.search-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 35px;
-}
-
-#search-input {
-    padding: 12px 15px;
-    border: 1px solid #BDC3C7;
-    border-radius: 10px;
-    font-size: 1em;
-    background-color: #F8F9F9;
-}
-
-#search-input:focus {
-    border-color: #3498DB;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
-
-#search-button {
-    padding: 12px 15px;
-    background-color: #3498DB;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.05em;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-#search-button:hover {
-    background-color: #2980B9;
-    transform: translateY(-2px);
-}
-
-/* Estilos del Índice Rápido */
-#sidebar h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #2C3E50;
-    border-bottom: 2px solid #D7DBDD;
-    padding-bottom: 12px;
-    margin-top: 25px;
-    margin-bottom: 20px;
-    font-size: 1.4em;
-    font-weight: 700;
-}
-
-#sidebar nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-#sidebar nav ul li a {
-    display: flex; /* Para alinear ícono si se añade */
-    align-items: center;
-    gap: 10px;
-    padding: 12px 10px;
-    color: #555;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s, padding-left 0.3s, box-shadow 0.2s;
-}
-
-#sidebar nav ul li a:hover {
-    background-color: #E8F6F3; /* Fondo suave para hover */
-    color: #2ECC71; /* Verde esmeralda */
-    padding-left: 15px;
-    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.15);
-}
-
-/* --- Contenido Principal --- */
-
-#content {
-    flex-grow: 1; 
-    background-color: #ffffff;
-    padding: 45px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-.intro-text {
-    font-size: 1.2em;
-    font-style: italic;
-    margin-bottom: 50px;
-    padding: 20px 25px;
-    border-left: 6px solid #2ECC71; /* Verde esmeralda */
-    background-color: #E8F6F3; /* Fondo verde muy suave */
-    border-radius: 10px;
-    line-height: 1.7;
-    color: #34495E;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #3498DB;
-    margin-top: 40px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #D7DBDD;
-    font-weight: 800;
-    font-size: 2.2em;
-    letter-spacing: 0.5px;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #D7DBDD;
-    margin: 50px 0;
-}
-
-/* --- Tablas y Contenido Específico (Con Estilo de Tarjetas) --- */
-
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 15px; /* Más espacio entre filas */
-    margin-bottom: 40px;
-}
-
-th, td {
-    padding: 20px;
-    text-align: left;
-    background-color: #ffffff;
-    border-radius: 10px; /* Bordes redondeados para celdas/tarjetas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave para cada celda */
-}
-
-th {
-    background: linear-gradient(90deg, #2C3E50 0%, #34495E 100%); /* Gradiente oscuro para TH */
-    color: #ffffff;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    /* Redondear solo las esquinas superiores del encabezado */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    position: sticky;
-    top: 0;
-    z-index: 2; /* Para que se vea sobre el contenido al scrollear */
-}
-
-/* Ajuste para las celdas de cuerpo de tabla */
-tbody tr td:first-child { border-bottom-left-radius: 10px; }
-tbody tr td:last-child { border-bottom-right-radius: 10px; }
-
-
-tbody tr {
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-}
-
-tbody tr:hover {
-    background-color: #F8F9F9;
-    transform: translateY(-5px); /* Efecto "levantar" */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
-}
-
-/* Colores de Meta en Tablas */
-.road-meta {
-    color: #E74C3C; /* Rojo fuerte */
-    font-weight: 800;
-}
-.signal-key {
-    color: #9B59B6; /* Morado para señales únicas */
-    font-weight: 800;
-}
-.road-meta-detail {
-    font-size: 0.98em;
-    font-style: italic;
-    color: #7F8C8D;
-}
-
-/* --- Imágenes y Galerías --- */
-
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 25px; /* Más espacio */
-    margin: 40px 0;
-    flex-wrap: wrap;
-    padding: 20px;
-    border: 3px dashed #BDC3C7; /* Borde más visible */
-    border-radius: 15px;
-    background-color: #F8F9F9;
-}
-.image-gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.image-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-.image-in-table {
-    margin-top: 15px;
-}
-.image-in-table img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.image-in-table img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-
-/* --- Estilos para el Chat IA Flotante (Ajustado) --- */
-
-#ai-chat-container {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1000;
-}
-
-#chat-toggle-button {
-    background-color: #2ECC71; /* Verde esmeralda */
-    color: white;
-    padding: 18px 30px;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
-    font-weight: 700;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-}
-
-#chat-toggle-button:hover {
-    background-color: #27AE60;
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.6);
-}
-
-#ai-chat-window {
-    width: 350px;
-    height: 500px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: absolute;
-    bottom: 90px;
-    right: 0;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Curva de animación más suave */
-}
-
-#ai-chat-window.hidden {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-    pointer-events: none; /* Deshabilita interacciones cuando está oculto */
-}
-
-#chat-header {
-    background: linear-gradient(90deg, #3498DB 0%, #2980B9 100%);
-    color: white;
-    padding: 18px 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-}
-
-#chat-close-button {
-    cursor: pointer;
-    font-size: 1.8em;
-    line-height: 1;
-    opacity: 0.9;
-    transition: opacity 0.2s, transform 0.2s;
-}
-
-#chat-close-button:hover {
-    opacity: 1;
-    transform: rotate(90deg);
-}
-
-#chat-messages {
-    flex-grow: 1;
-    padding: 15px;
-    overflow-y: auto;
-    background-color: #F8F9F9;
-    border-bottom: 1px solid #ECF0F1;
-}
-
-.message {
-    padding: 12px 18px;
-    margin-bottom: 15px;
-    border-radius: 20px; /* Más redondeado */
-    max-width: 85%;
-    line-height: 1.5;
-    font-size: 0.95em;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-}
-
-.user-message {
-    background-color: #D6EAF8;
-    margin-left: auto;
-    text-align: right;
-    border-bottom-right-radius: 5px; /* Pequeño detalle */
-}
-
-.bot-message {
-    background-color: #ffffff;
-    border: 1px solid #ECF0F1;
-    text-align: left;
-    border-bottom-left-radius: 5px; /* Pequeño detalle */
-}
-
-#chat-input-area {
-    display: flex;
-    padding: 15px;
-    border-top: 1px solid #BDC3C7;
-    background-color: #ffffff;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-#chat-input {
-    flex-grow: 1;
-    padding: 12px 15px;
-    border: 1px solid #BDC3C7;
-    border-radius: 25px; /* Input redondeado */
-    margin-right: 10px;
-    font-size: 1em;
-    background-color: #F8F9F9;
-}
-
-#chat-input:focus {
-    border-color: #3498DB;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
-
-#chat-send-button {
-    background-color: #2ECC71;
-    color: white;
-    border: none;
-    border-radius: 25px; /* Botón redondeado */
-    padding: 12px 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-#chat-send-button:hover {
-    background-color: #27AE60;
-    transform: scale(1.05);
-}
-
-/* Medias Queries para responsividad */
-@media (max-width: 1024px) {
-    .main-layout {
-        flex-direction: column;
-        padding: 0 20px;
-        gap: 20px;
-    }
-    #sidebar {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-        position: relative;
-        top: 0;
-    }
-    #content {
-        padding: 30px;
-    }
-    header {
-        padding: 15px 20px;
-    }
-    header h1 {
-        font-size: 2em;
-    }
-    .header-nav {
-        gap: 15px;
-    }
-    .header-nav a {
-        font-size: 0.9em;
-        padding: 6px 10px;
-    }
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em;
-        line-height: 1.2;
-    }
-    .header-nav {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 5px;
-    }
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    #content {
-        padding: 15px;
-    }
-    h2 {
-        font-size: 1.8em;
-    }
-    .intro-text {
-        font-size: 1.05em;
-        padding: 15px;
-    }
-    th, td {
-        padding: 12px;
-    }
-    .image-gallery {
-        padding: 10px;
-        gap: 10px;
-    }
-    #ai-chat-window {
-        width: 90vw;
-        height: 70vh;
-        bottom: 15px;
-        right: 15px;
-    }
-    #chat-toggle-button {
-        padding: 12px 20px;
-        font-size: 1em;
-        bottom: 15px;
-        right: 15px;
-    }
-}
-/* Paleta de Colores "Innovadora":
-    - Base Principal: #2C3E50 (Azul Oscuro, base sólida)
-    - Acento Primario: #3498DB (Azul Brillante, para interacción/títulos)
-    - Acento Secundario: #2ECC71 (Verde Esmeralda, para éxito/llamada a la acción)
-    - Alerta/Importante: #E74C3C (Rojo, para contraste fuerte)
-    - Fondo General: #ECF0F1 (Gris Claro, limpio)
-    - Elementos de Contenido: #FFFFFF
-*/
-
-/* Fuentes adicionales */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap');
-
 /* Habilitar desplazamiento suave nativo para toda la página */
 html {
     scroll-behavior: smooth; 
@@ -624,6 +54,7 @@ header::before {
     to { transform: rotate(360deg); }
 }
 
+
 .header-content {
     max-width: 1280px;
     margin: 0 auto;
@@ -634,9 +65,28 @@ header::before {
     z-index: 1;
 }
 
+/* --- LOGO Y TÍTULO --- */
+.logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.site-logo {
+    height: 70px; /* Tamaño del logo */
+    width: auto;
+    border-radius: 50%; /* Borde sutil para redondear si es cuadrado/pin */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.site-logo:hover {
+    transform: scale(1.05); /* Efecto hover del logo */
+}
+
 header h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.8em;
+    font-size: 2.2em; /* Ajustado para coexistir con el logo */
     font-weight: 900;
     margin: 0;
     letter-spacing: 2px;
@@ -885,7 +335,7 @@ tbody tr:hover {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .image-gallery img:hover {
@@ -908,16 +358,16 @@ tbody tr:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* --- ESTILOS MEJORADOS PARA EL FORMULARIO DE CONTACTO --- */
+/* --- Estilos del Formulario de Contacto --- */
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Más espacio entre campos */
+    gap: 25px;
     padding: 40px;
     background-color: #F8F9F9;
-    border-radius: 18px; /* Más redondeado */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -929,29 +379,29 @@ tbody tr:hover {
 .contact-form label {
     font-weight: 700;
     color: #2C3E50;
-    font-size: 1.1em; /* Un poco más grande */
+    font-size: 1.1em;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    padding: 18px; /* Más padding para celdas más gruesas */
-    border: 2px solid #BDC3C7; /* Borde más grueso */
-    border-radius: 12px; /* Más redondeado */
+    padding: 18px;
+    border: 2px solid #BDC3C7;
+    border-radius: 12px;
     font-size: 1em;
     background-color: white;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interior sutil */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .contact-form textarea {
-    min-height: 180px; /* Más espacio para el mensaje */
+    min-height: 180px;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #3498DB;
-    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3); /* Sombra de foco más visible */
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3);
     background-color: #ffffff;
 }
 
@@ -971,7 +421,7 @@ tbody tr:hover {
     transition: background-color 0.3s, transform 0.2s;
     font-weight: 700;
     box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
-    display: block; /* Asegura que el label ocupe todo el ancho para ocultar el input */
+    display: block;
 }
 
 .file-label:hover {
@@ -987,7 +437,7 @@ tbody tr:hover {
     top: 0;
     left: 0;
     cursor: pointer;
-    z-index: 10; /* Asegura que está por encima del label */
+    z-index: 10;
 }
 
 #file-name-display {
@@ -1024,7 +474,7 @@ tbody tr:hover {
     box-shadow: 0 10px 30px rgba(46, 204, 113, 0.6);
 }
 
-/* Estilo para el mensaje de estado (éxito/error) */
+/* Estilo para el mensaje de estado (errores de validación interna) */
 .status-message {
     padding: 15px;
     border-radius: 10px;
@@ -1050,15 +500,159 @@ tbody tr:hover {
     opacity: 1;
 }
 
-/* --- Resto de Estilos del Chat IA (Mantener) --- */
+/* --- Estilos para el Chat IA Flotante --- */
+
 #ai-chat-container {
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 1000;
 }
-/* ... (El resto de estilos de chat IA) ... */
-/* Se asume que el resto de estilos de chat y media queries permanecen iguales */
+
+#chat-toggle-button {
+    background-color: #2ECC71;
+    color: white;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+#chat-toggle-button:hover {
+    background-color: #27AE60;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.6);
+}
+
+#ai-chat-window {
+    width: 350px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#ai-chat-window.hidden {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    pointer-events: none;
+}
+
+#chat-header {
+    background: linear-gradient(90deg, #3498DB 0%, #2980B9 100%);
+    color: white;
+    padding: 18px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+#chat-close-button {
+    cursor: pointer;
+    font-size: 1.8em;
+    line-height: 1;
+    opacity: 0.9;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+#chat-close-button:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+#chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #F8F9F9;
+    border-bottom: 1px solid #ECF0F1;
+}
+
+.message {
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    max-width: 85%;
+    line-height: 1.5;
+    font-size: 0.95em;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.user-message {
+    background-color: #D6EAF8;
+    margin-left: auto;
+    text-align: right;
+    border-bottom-right-radius: 5px;
+}
+
+.bot-message {
+    background-color: #ffffff;
+    border: 1px solid #ECF0F1;
+    text-align: left;
+    border-bottom-left-radius: 5px;
+}
+
+#chat-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #BDC3C7;
+    background-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #BDC3C7;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 1em;
+    background-color: #F8F9F9;
+}
+
+#chat-input:focus {
+    border-color: #3498DB;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+#chat-send-button {
+    background-color: #2ECC71;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#chat-send-button:hover {
+    background-color: #27AE60;
+    transform: scale(1.05);
+}
+
 /* --- ESTILOS PARA EL MENSAJE DE ESTADO CENTRAL Y FLOTANTE --- */
 
 #central-status-message {
@@ -1072,7 +666,7 @@ tbody tr:hover {
     font-size: 1.4em;
     font-weight: 700;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    z-index: 9999; /* Asegura que esté por encima de todo */
+    z-index: 9999;
     text-align: center;
     transition: opacity 0.3s, visibility 0.3s;
 }
@@ -1083,9 +677,94 @@ tbody tr:hover {
 }
 
 #central-status-message.success-central {
-    background-color: #2ECC71; /* Verde Esmeralda */
+    background-color: #2ECC71;
 }
 
 #central-status-message.error-central {
-    background-color: #E74C3C; /* Rojo Ladrillo */
+    background-color: #E74C3C;
+}
+
+
+/* Medias Queries para responsividad */
+@media (max-width: 1024px) {
+    .main-layout {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 20px;
+    }
+    #sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        position: relative;
+        top: 0;
+    }
+    #content {
+        padding: 30px;
+    }
+    header {
+        padding: 15px 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .site-logo {
+        height: 50px;
+    }
+    .header-nav {
+        gap: 15px;
+    }
+    .header-nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+    .header-nav {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .site-logo {
+        height: 40px;
+    }
+    #content {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .intro-text {
+        font-size: 1.05em;
+        padding: 15px;
+    }
+    th, td {
+        padding: 12px;
+    }
+    .image-gallery {
+        padding: 10px;
+        gap: 10px;
+    }
+    #ai-chat-window {
+        width: 90vw;
+        height: 70vh;
+        bottom: 15px;
+        right: 15px;
+    }
+    #chat-toggle-button {
+        padding: 12px 20px;
+        font-size: 1em;
+        bottom: 15px;
+        right: 15px;
+    }
 }
