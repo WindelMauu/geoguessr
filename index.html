@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.jpg" type="image/jpg">
     <title>GeoGuessr PRO | Guía Definitiva de Metadatos</title>
-    <meta data="Joel El Younoussi Layel">
-    <meta data="2SMR">
     <link rel="stylesheet" href="estilos.css">
     
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -26,6 +23,8 @@
             <nav class="header-nav">
                 <a href="#introduccion">Inicio</a>
                 <a href="#sol-hemisferio">Guía</a>
+                <a href="extra.html">Extra Info</a>
+                <a href="#recursos" onclick="scrollToElement('recursos'); return false;">Recursos</a>
                 <a href="#contacto">Contacto</a> 
             </nav>
         </div>
@@ -43,6 +42,7 @@
                 
                 <h3>Índice Rápido</h3>
                 <ul>
+                    <li><a href="extra.html">📚 Info Extra</a></li>
                     <li><a href="#sol-hemisferio" onclick="scrollToElement('sol-hemisferio'); return false;">☀️ Sol y Hemisferios</a></li>
                     <li><a href="#conduccion" onclick="scrollToElement('conduccion'); return false;">🚗 Lado de Conducción</a></li>
                     <li><a href="#coches-camaras" onclick="scrollToElement('coches-camaras'); return false;">📷 Coches y Cámaras</a></li>
@@ -50,6 +50,8 @@
                     <li><a href="#idiomas" onclick="scrollToElement('idiomas'); return false;">💬 Idiomas Clave</a></li>
                     <li><a href="#estructural" onclick="scrollToElement('estructural'); return false;">🚧 Estructurales (Meta Vial)</a></li>
                     <li><a href="#pistas-claves" onclick="scrollToElement('pistas-claves'); return false;">💡 Pistas Clave</a></li>
+                    <li><a href="#recursos" onclick="scrollToElement('recursos'); return false;">📚 Recursos Útiles</a></li>
+                    
                 </ul>
             </nav>
         </aside>
@@ -93,8 +95,12 @@
                     </tbody>
                 </table>
                 <div class="image-gallery">
-                    <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_sundirection.png" alt="Dirección del Sol por Hemisferio">
-                    <img src="https://storage.googleapis.com/portaleducativo-net-publica-g3p6/biblioteca/Planeta_geograficos.jpg" alt="Planeta con Líneas Geográficas">
+                    <a href="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_sundirection.png">
+                        <img src="https://www.plonkit.net/images/resize/1200/80/beginners-guide/whattolook_sundirection.png" alt="Dirección del Sol por Hemisferio" class="zoomable-image">
+                    </a>
+                    <a href="https://storage.googleapis.com/portaleducativo-net-publica-g3p6/biblioteca/Planeta_geograficos.jpg">
+                        <img src="https://storage.googleapis.com/portaleducativo-net-publica-g3p6/biblioteca/Planeta_geograficos.jpg" alt="Planeta con Líneas Geográficas" class="zoomable-image">
+                    </a>
                 </div>
             </section>
             
@@ -122,7 +128,9 @@
                     </tbody>
                 </table>
                 <div class="image-gallery full-width">
-                    <img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/Driving_direction_v7.png" alt="Mapa de direcciones de conducción">
+                    <a href="https://www.plonkit.net/images/resize/1920/80/beginners-guide/Driving_direction_v7.png">
+                        <img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/Driving_direction_v7.png" alt="Mapa de direcciones de conducción" class="zoomable-image">
+                    </a>
                 </div>
             </section>
             
@@ -168,7 +176,9 @@
                     </tbody>
                 </table>
                 <div class="image-gallery full-width">
-                    <img src="Imgg2.jpg" alt="Ejemplos de coches y cámaras de Google Street View">
+                    <a href="Imgg2.jpg">
+                        <img src="Imgg2.jpg" alt="Ejemplos de coches y cámaras de Google Street View" class="zoomable-image">
+                    </a>
                 </div>
             </section>
 
@@ -220,7 +230,9 @@
                 </table>
                 
                 <div class="image-gallery full-width">
-                    <img src="https://preview.redd.it/2tx42cty3xs61.png?width=1080&crop=smart&auto=webp&s=2a883c3469c300333f942c84887ac9a447e99d60" alt="Señales de Tráfico Clave GeoGuessr: Stop, Pare, Alto, Prioridad">
+                    <a href="https://preview.redd.it/2tx42cty3xs61.png?width=1080&crop=smart&auto=webp&s=2a883c3469c300333f942c84887ac9a447e99d60">
+                        <img src="https://preview.redd.it/2tx42cty3xs61.png?width=1080&crop=smart&auto=webp&s=2a883c3469c300333f942c84887ac9a447e99d60" alt="Señales de Tráfico Clave GeoGuessr: Stop, Pare, Alto, Prioridad" class="zoomable-image">
+                    </a>
                 </div>
             </section>
 
@@ -231,8 +243,12 @@
                 <p>Reconocer los caracteres especiales, acentos, o la estructura básica de las letras te permite reducir el número de países de inmediato.</p>
                 
                 <div class="image-gallery full-width">
-                    <img src="https://i.redd.it/z9wtqs747ws61.png" alt="Guía de Identificación Rápida de Idiomas por caracteres">
-                    <img src="https://i.redd.it/sgl09710f7hc1.png" alt="Diacríticos y Letras Únicas en Europa del Este">
+                    <a href="https://i.redd.it/z9wtqs747ws61.png">
+                        <img src="https://i.redd.it/z9wtqs747ws61.png" alt="Guía de Identificación Rápida de Idiomas por caracteres" class="zoomable-image">
+                    </a>
+                    <a href="https://i.redd.it/sgl09710f7hc1.png">
+                        <img src="https://i.redd.it/sgl09710f7hc1.png" alt="Diacríticos y Letras Únicas en Europa del Este" class="zoomable-image">
+                    </a>
                 </div>
             </section>
             
@@ -254,7 +270,11 @@
                             <td class="road-meta">Postes Kilométricos</td>
                             <td>Eslovenia</td>
                             <td class="road-meta-detail">Incluyen el número de carretera en un recuadro amarillo. 
-                            <div class="image-in-table"><img src="https://us.123rf.com/450wm/jojoo64/jojoo641512/jojoo64151200321/49239106-esloveno-se%C3%B1al-de-tr%C3%A1fico-carretera-marcador-de-distancia.jpg?ver=6" alt="Poste kilométrico Eslovenia"></div></td>
+                            <div class="image-in-table">
+                                <a href="https://us.123rf.com/450wm/jojoo64/jojoo641512/jojoo64151200321/49239106-esloveno-se%C3%B1al-de-tr%C3%A1fico-carretera-marcador-de-distancia.jpg?ver=6">
+                                    <img src="https://us.123rf.com/450wm/jojoo64/jojoo641512/jojoo64151200321/49239106-esloveno-se%C3%B1al-de-tr%C3%A1fico-carretera-marcador-de-distancia.jpg?ver=6" alt="Poste kilométrico Eslovenia" class="zoomable-image">
+                                </a>
+                            </div></td>
                         </tr>
                         <tr>
                             <td class="road-meta">Soporte de Señal</td>
@@ -266,25 +286,41 @@
                             <td class="road-meta">Soporte de Señal</td>
                             <td>Uruguay</td>
                             <td class="road-meta-detail">Dos soportes pequeños (uno arriba, uno abajo) en la parte trasera. 
-                            <div class="image-in-table"><img src="https://practicatest.uy/static/img/uy/senales/senales_peligro.png" alt="Señales de Peligro Uruguay"></div></td>
+                            <div class="image-in-table">
+                                <a href="https://practicatest.uy/static/img/uy/senales/senales_peligro.png">
+                                    <img src="https://practicatest.uy/static/img/uy/senales/senales_peligro.png" alt="Señales de Peligro Uruguay" class="zoomable-image">
+                                </a>
+                            </div></td>
                         </tr>
                         <tr>
                             <td class="road-meta">Bolardos</td>
                             <td>Francia, Mexico, Islandia, Italia.</td>
                             <td class="road-meta-detail">A menudo blancos y rojos (general).
-                            <div class="image-in-table"><img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/whattolook_bollard.png" alt="Ejemplos de Bolardos"></div></td>
+                            <div class="image-in-table">
+                                <a href="https://www.plonkit.net/images/resize/1920/80/beginners-guide/whattolook_bollard.png">
+                                    <img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/whattolook_bollard.png" alt="Ejemplos de Bolardos" class="zoomable-image">
+                                </a>
+                            </div></td>
                         </tr>
                         <tr>
                             <td class="road-meta">Numeración Azul</td>
                             <td>Alemania, Francia, Italia, etc.</td>
                             <td class="road-meta-detail">Carreteras de alta velocidad (Autopistas / Autovías).
-                            <div class="image-in-table"><img src="Imgg.jpg" alt="Numeración Azul de Carreteras"></div></td>
+                            <div class="image-in-table">
+                                <a href="Imgg.jpg">
+                                    <img src="Imgg.jpg" alt="Numeración Azul de Carreteras" class="zoomable-image">
+                                </a>
+                            </div></td>
                         </tr>
                         <tr>
                             <td class="road-meta">Numeración Amarillo/Negro</td>
                             <td>Alemania, Austria, etc.</td>
                             <td class="road-meta-detail">Carreteras principales (Federales / Nacionales).
-                            <div class="image-in-table"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bundesstra%C3%9Fe_299_number.svg/640px-Bundesstra%C3%9Fe_299_number.svg.png" alt="Numeración Amarillo/Negro"></div></td>
+                            <div class="image-in-table">
+                                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bundesstra%C3%9Fe_299_number.svg/640px-Bundesstra%C3%9Fe_299_number.svg.png">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bundesstra%C3%9Fe_299_number.svg/640px-Bundesstra%C3%9Fe_299_number.svg.png" alt="Numeración Amarillo/Negro" class="zoomable-image">
+                                </a>
+                            </div></td>
                         </tr>
                     </tbody>
                 </table>
@@ -296,8 +332,24 @@
                 <h2>💡 Pistas Clave Misceláneas</h2>
                 <p>Algunos metadatos son más sutiles y pueden ayudarte a acotar el país cuando fallan los indicadores principales. Estos incluyen detalles de la matrícula, postes y elementos de mobiliario urbano. Observa esta imagen para identificar los elementos más comunes:</p>
                 <div class="image-gallery full-width">
-                    <img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/beginners_randommetas1.png" alt="Pistas Clave de GeoGuessr (Miscélanea)">
+                    <a href="https://www.plonkit.net/images/resize/1920/80/beginners-guide/beginners_randommetas1.png">
+                        <img src="https://www.plonkit.net/images/resize/1920/80/beginners-guide/beginners_randommetas1.png" alt="Pistas Clave de GeoGuessr (Miscélanea)" class="zoomable-image">
+                    </a>
                 </div>
+            </section>
+            
+            <hr>
+            
+            <section id="recursos">
+                <h2>📚 Recursos Útiles</h2>
+                <p>Aquí tienes enlaces externos que pueden ayudarte a profundizar tus conocimientos y practicar tus habilidades en GeoGuessr:</p>
+                
+                <ul class="resource-list">
+                    <li><a href="https://geoguessr.com/" target="_blank">GeoGuessr Oficial</a> - El juego principal para practicar.</li>
+                    <li><a href="https://geohub.fr/" target="_blank">GeoHub</a> - Una excelente colección de mapas específicos y herramientas de entrenamiento.</li>
+                    <li><a href="https://www.google.com/maps/streetview/" target="_blank">Google Street View</a> - Explora países que no conoces para familiarizarte con el entorno.</li>
+                    <li><a href="https://plonkit.net/advanced-guide" target="_blank">Guía Avanzada (Plonk It)</a> - Para información más detallada sobre metadatos específicos.</li>
+                </ul>
             </section>
             
             <hr>
@@ -344,7 +396,7 @@
         <div id="ai-chat-window" class="hidden">
             <div id="chat-header">
                 GeoGuru 🤖
-                <span id="chat-close-button">&times;</span>
+                <span id="chat-close-button">×</span>
             </div>
             <div id="chat-messages">
                 <div class="message bot-message">¡Hola! Soy GeoGuru, tu asistente de GeoGuessr. Pregúntame sobre cualquier concepto de la guía (e.g., "Postes Eslovenia").</div>
@@ -354,6 +406,11 @@
                 <button id="chat-send-button">Enviar</button>
             </div>
         </div>
+    </div>
+
+    <div id="lightbox" class="hidden">
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+        <span id="lightbox-close">✖</span>
     </div>
 
 
@@ -439,6 +496,8 @@
                 response = 'Las pistas misceláneas incluyen detalles de <b>placas de matrícula</b>, el diseño de <b>vallas</b> y las <b>etiquetas</b> en los postes de electricidad. La sección de "Pistas Clave Misceláneas" tiene una imagen con varios ejemplos.';
             } else if (query.includes('idiomas') || query.includes('lenguas') || query.includes('caracteres')) {
                 response = 'La identificación de idiomas por caracteres especiales (cirílico, tailandés, etc.) es esencial. Por ejemplo, el <b>cirílico</b> te acota a Bulgaria/Rusia, y las diéresis con puntitos o anillos (`Ä, Ö, Å`) son comunes en el norte de Europa.';
+            } else if (query.includes('recursos') || query.includes('enlaces')) {
+                response = 'La sección de Recursos incluye enlaces útiles como GeoHub para mapas de práctica específicos y el sitio oficial de GeoGuessr.';
             } else {
                 response = 'Hmm... No estoy seguro de ese concepto. ¿Puedes intentar con palabras clave como "sol", "coche", "stop", "idiomas" o "numeración"?';
             }
@@ -645,6 +704,40 @@
         }
 
         document.getElementById('contact-form').onsubmit = sendDiscordWebhook;
+
+
+        // --- FUNCIONALIDAD DE LIGHTBOX / ZOOM DE IMÁGENES ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        // Selecciona todas las imágenes con la clase 'zoomable-image'
+        document.querySelectorAll('.zoomable-image').forEach(image => {
+            image.addEventListener('click', (e) => {
+                e.preventDefault(); // Evita que el enlace haga la acción por defecto
+                
+                // Obtiene la URL de la imagen (del atributo href de su padre <a>)
+                const imageUrl = image.parentElement.href;
+                
+                lightboxImg.src = imageUrl; // Establece la fuente de la imagen en el lightbox
+                lightbox.classList.remove('hidden'); // Muestra el lightbox
+                document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+            });
+        });
+
+        // Cierra el lightbox al hacer clic en el botón de cierre
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restaura el scroll del fondo
+        });
+
+        // Cierra el lightbox al hacer clic fuera de la imagen (en el fondo oscuro)
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) { // Solo si el clic es directamente en el div del lightbox
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
 
     </script>
 
